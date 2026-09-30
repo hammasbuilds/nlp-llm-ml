@@ -2,7 +2,7 @@
 <p align="center"><i>Each encoder's trained pooling wins, and the two encoders rank the five poolings differently. "Best pooling" has no answer on its own.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#the-ranking-flips">The ranking flips</a> &middot;
   <a href="#two-of-the-five-are-not-different-poolings-on-bge">Not five poolings</a> &middot;
   <a href="#method">Method</a> &middot;
@@ -28,7 +28,7 @@ This is that project. The encoder is held fixed and only the pooling changes.
 
 ---
 
-## The result
+## Results
 
 HotpotQA · 2,964 documents · 300 queries. Two encoders, both 384-dimensional so a difference
 cannot be a difference in vector width, with **opposite trained poolings**. BM25 on the same

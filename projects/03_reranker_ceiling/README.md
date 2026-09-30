@@ -2,7 +2,7 @@
 <p align="center"><i>A reranker cannot retrieve what was never fetched</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#the-ceiling">The ceiling</a> &middot;
   <a href="#what-this-means-for-project-01">What it means for project 01</a> &middot;
   <a href="#limitations">Limitations</a> &middot;
@@ -28,7 +28,7 @@ That turns an argument into a measurement.
 
 ---
 
-## The result
+## Results
 
 BM25, TF-IDF, BGE-small and a **random control** as first stages. Top-50 reranked by
 `cross-encoder/ms-marco-MiniLM-L-6-v2`. HotpotQA, 2,964 documents, 300 queries.

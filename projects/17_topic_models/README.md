@@ -2,7 +2,7 @@
 <p align="center"><i>Coherence and the task disagree at every setting tested, and the disagreement is systematic</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#the-disagreement-is-not-noise">Not noise</a> &middot;
   <a href="#the-input-representation-is-worth-as-much-as-the-model">The input representation</a> &middot;
   <a href="#an-expectation-that-did-not-survive">A refuted expectation</a> &middot;
@@ -30,7 +30,7 @@ rankings ever coincide.
 
 ---
 
-## The result
+## Results
 
 HotpotQA · 2,964 documents · 10,930 terms (min_df 2, max_df 0.5, stopwords removed) ·
 300 queries. **BM25 on the same corpus and queries scores 0.865**, which is the line every

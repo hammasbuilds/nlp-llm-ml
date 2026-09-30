@@ -2,7 +2,7 @@
 <p align="center"><i>Every setting tested loses to the first stage it was meant to improve — and the per-query breakdown says exactly why.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#what-the-mean-hides">What the mean hides</a> &middot;
   <a href="#which-queries-it-hurts">Which queries</a> &middot;
   <a href="#method">Method</a> &middot;
@@ -27,7 +27,7 @@ of the mean.
 
 ---
 
-## The result
+## Results
 
 HotpotQA, 2,964 paragraphs, 300 questions — the same corpus projects 01, 02, 03 and 07 use.
 BM25 first stage at **recall@10 = 0.865**.

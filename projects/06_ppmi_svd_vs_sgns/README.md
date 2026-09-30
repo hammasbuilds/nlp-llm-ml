@@ -2,10 +2,9 @@
 <p align="center"><i>Skip-gram with negative sampling is factorising a shifted PMI matrix. So factorise it directly, and transfer its hyperparameters one at a time.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
-  <a href="#the-ladder">The ladder</a> &middot;
+  <a href="#results">Results</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#method">Method</a> &middot;
-  <a href="#problems-hit-while-building-this">Problems hit</a> &middot;
   <a href="#limitations">Limitations</a>
 </p>
 
@@ -36,7 +35,7 @@ This project transfers those decisions one at a time and measures each.
 
 ---
 
-## The result
+## Results
 
 > ### After transferring word2vec's hyperparameters, a pure counting model is statistically indistinguishable from SGNS — across two independent runs, p = 0.969 and p = 0.331. Nothing separates them but the hyperparameters.
 
@@ -154,40 +153,6 @@ single decision, so the delta on a row is attributable to the name on that row.
 **Pooling is the crudest available** — the mean of the word vectors present, unit
 normalised, identical to project 01's. The question is what the *matrix* buys, not what a
 better pooling strategy buys.
-
----
-
-## Problems hit while building this
-
-**ARPACK never finished.** `scipy.sparse.linalg.svds` is a Krylov method, and its cost
-grows badly with the number of components requested. At 300 components on a 20,000-square
-PMI matrix it had not produced a single factorisation after twelve minutes. Replaced with
-Halko, Martinsson & Tropp's randomized range finder, written out in `src/factorize.py`: one
-rung now takes about eighty seconds. It is checked against ARPACK on small matrices —
-singular values, and the subspace the vectors span — because an approximation that
-converged to the wrong subspace would still return vectors.
-
-The power iterations in it are not decoration. A PMI matrix has a slowly decaying spectrum
-with no rank cutoff, so with `n_iter=0` the random subspace is contaminated by the tail and
-the recovered singular values come out too small.
-`test_power_iterations_help_on_a_slowly_decaying_spectrum` measures that rather than
-asserting it.
-
-**A query with no known words scored perfectly.** Its pooled vector is all zeros, so every
-document scores exactly 0, and `argpartition` on a tie returns an arbitrary *k* — which
-sometimes contained the gold document. The scorer was paying a method for its vocabulary
-gaps, and the smaller vocabulary would have scored better the more often it failed. Such
-queries are now scored zero and counted.
-
-**Re-tokenizing the corpus eight times.** The obvious implementation of mean pooling
-re-reads every document for every embedding. With eight embeddings over 66,581 paragraphs
-that is eight passes of Python-level tokenizing to produce eight matrices whose only
-difference is the vectors being looked up. Counting once into a sparse document-by-term
-matrix turns pooling into a single matmul; `test_pooler_reproduces_the_naive_pooling`
-asserts the fast path and the obvious one agree, because an optimisation that changed the
-score would be a bug wearing the costume of a tuning parameter.
-
----
 
 ## Limitations
 

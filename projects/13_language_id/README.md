@@ -2,10 +2,9 @@
 <p align="center"><i>0.997 on a paragraph, 0.788 on ten characters. The number is reported on documents and the method is used on queries.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#the-ranking-flips-with-length">The ranking flips</a> &middot;
   <a href="#the-hard-pair-is-not-the-one-that-looks-hard">The hard pair</a> &middot;
-  <a href="#problems-hit-while-building-this">Problems hit</a> &middot;
   <a href="#limitations">Limitations</a>
 </p>
 
@@ -36,7 +35,7 @@ Three standard identifiers over the same profiles:
 
 ---
 
-## The result
+## Results
 
 Accuracy against input length. Chance is 0.333.
 
@@ -110,27 +109,6 @@ is a vocabulary that a short enough window simply does not contain.
 The run reads the worst confusion off the matrix rather than asserting which pair it will
 be — because the first version of this project hardcoded the C/Python claim and would have
 shipped a sentence the data contradicts.
-
----
-
-## Problems hit while building this
-
-**A run that should take a minute took over an hour.** `naive_bayes` needs the size of the
-union of every profile's n-gram vocabulary for its smoothing denominator. That union was
-being rebuilt **on every single classification** — millions of n-grams, 6,300 times. It
-depends only on the profiles, so it is now computed once and memoised against their
-identities. The full sweep went from unfinished after an hour to **34 seconds**.
-
-Nothing about the output looked wrong. The results were correct; only the clock said
-anything, and only because the first row of a seven-row table took longer than the whole run
-should have.
-
-**The C/Python claim was written before it was measured.** Both the module docstring and the
-closing paragraph asserted that the two programming languages would be the hard pair. They
-are not. Both now state the expectation and then the refutation, and the closing text is
-derived from the confusion matrix at runtime rather than written by hand.
-
----
 
 ## Limitations
 

@@ -3,9 +3,8 @@
 
 <p align="center">
   <a href="#what-the-reference-is-and-is-not">What the reference is</a> &middot;
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#the-one-construction-that-matters">The one construction</a> &middot;
-  <a href="#problems-hit-while-building-this">Problems hit</a> &middot;
   <a href="#limitations">Limitations</a>
 </p>
 
@@ -34,7 +33,7 @@ the choice of splitter is an unreported parameter of every downstream result.**
 
 ---
 
-## The result
+## Results
 
 61,775 paragraphs, 203,021 reference boundaries. (The corpus holds 66,581 paragraphs; the
 4,806 that HotpotQA splits into a single sentence contain no boundary to agree about and
@@ -111,27 +110,6 @@ Why each fix misses:
 The abbreviation list *does* completely solve the construction it was built for — 5,404
 errors to zero. It is simply not the construction that dominates. **Every splitter here
 spends its sophistication on the second-largest problem.**
-
----
-
-## Problems hit while building this
-
-**A guaranteed false positive on every paragraph.** The splitters emitted a boundary at the
-end of the text; the reference never contains one, because it is a list of *n* pieces and
-*n* pieces have *n*−1 joins. That was one spurious error per paragraph across the corpus,
-and it cost about **fifteen points of precision** — the first run reported 0.905 as 0.715.
-
-**It hid behind a second bug.** Those end-of-text errors were being filed under "quote or
-bracket follows", because the test was `following[:1] in "\"'(["` and **the empty string is
-a substring of every string**, so the slice form returns `True` when nothing follows. The
-taxonomy said 5,556 quote errors and 668 number errors; the real figures are 297 and 59.
-
-Neither bug raised an exception, and both produced a plausible table. What exposed them was
-printing six actual disputed spans with their surrounding text — at which point every one of
-them turned out to end at `|` with nothing after it. `test_the_end_of_the_text_is_not_a_boundary`
-and `test_end_of_text_is_named_rather_than_misfiled` are the regression tests.
-
----
 
 ## Limitations
 

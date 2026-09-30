@@ -2,10 +2,9 @@
 <p align="center"><i>Six of seven ranking positions change when you swap the error model. The ranking is a property of the corruption, not of the measures.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#the-measure-that-knows-the-error-model-does-not-win">The error-model metric</a> &middot;
   <a href="#method">Method</a> &middot;
-  <a href="#problems-hit-while-building-this">Problems hit</a> &middot;
   <a href="#limitations">Limitations</a>
 </p>
 
@@ -40,7 +39,7 @@ comes back first.
 
 ---
 
-## The result
+## Results
 
 | Measure | typing | phonetic | gap |
 |---|---:|---:|---:|
@@ -119,22 +118,6 @@ usually a different three-letter word, and the task stops being retrieval.
 returned unchanged rather than corrupted by a rule that does not apply — so the two models
 corrupt different *numbers* of words (5 of 600 unchanged under typing, 59 under phonetic),
 and the run reports that rather than hiding it. Unchanged words are excluded from scoring.
-
----
-
-## Problems hit while building this
-
-**The phonetic model could return an empty string.** Several rewrites delete characters —
-`gh` → nothing, trailing `e` → nothing. Applied repeatedly to a short word, `ee` became `e`
-became `""`, and the early-return path skipped the non-empty guard at the end of the
-function. An empty query scores equally against every candidate, which would have quietly
-handed every measure the same wrong answer on a handful of words.
-
-A rewrite that would empty the string is now not applicable at all.
-`test_phonetic_never_returns_an_empty_string` is the regression test, and it is the test that
-found it.
-
----
 
 ## Limitations
 

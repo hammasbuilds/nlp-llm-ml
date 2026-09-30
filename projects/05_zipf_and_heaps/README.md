@@ -2,12 +2,11 @@
 <p align="center"><i>Five estimators of one exponent span 0.56 on the same million tokens — and the correction for the best-known bias is the worst of the five.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#which-estimator-should-be-believed">Which estimator</a> &middot;
   <a href="#is-it-a-power-law-at-all">Is it a power law</a> &middot;
   <a href="#heaps-law">Heaps' law</a> &middot;
   <a href="#what-a-fixed-vocabulary-costs">The bill</a> &middot;
-  <a href="#problems-hit-while-building-this">Problems hit</a> &middot;
   <a href="#limitations">Limitations</a>
 </p>
 
@@ -34,7 +33,7 @@ They are related by `g = 1 + 1/a`, so a paper reporting 1.0 and a paper reportin
 
 ---
 
-## The result
+## Results
 
 One million tokens, one tokenizer, five estimators that all appear in the literature.
 
@@ -177,20 +176,6 @@ flowchart TD
 | MBPP + HumanEval | code-aware | 78,646 | 3,221 | 1.341 |
 
 Changing the tokenizer moves C's exponent by **0.231**. Under one tokenizer, the prose-to-C difference is 0.147. **The preprocessing choice moves the answer further than the thing being compared** — so a cross-register exponent comparison is only meaningful with the tokenizer named, and most published ones do not name it.
-
----
-
-## Problems hit while building this
-
-**The KS statistic returned the same number for a power law and a geometric.** Both gave exactly 0.2581. The textbook `i/n` form of the statistic assumes no ties; word counts are almost all ties, so for the first member of the block at `x_min` it compared the theoretical CDF against `(i−1)/n = 0` and reported `F(x_min)` — the height of the atom, a constant of the model, for any data whatsoever. The fix is to evaluate the empirical CDF once per distinct value and compare its left limit against `F(v−1)`, not `F(v)`. `test_ks_separates_a_power_law_from_a_geometric` is the regression test, and it asserts a **ratio** rather than a threshold, because a ratio is what a usable statistic has to deliver.
-
-**The split-half estimator returned −2.44, confidently.** `Generator.choice(p=...)` draws one uniform per sample and maps it through the cumulative distribution. The split mask was `u < 0.5` from a generator seeded identically to the one that made the synthetic corpus — so it selected precisely the tokens whose cumulative probability was below one half, which is the head of the distribution and nothing else. Twelve types reached the ranking half instead of eleven thousand, one point survived the pairing, and `lstsq` returned a minimum-norm solution for a single point without complaint. Two changes: the split now draws from independent entropy, and `_ols_slope` raises rather than fitting a line to fewer than ten points. The second is what would have made the first loud instead of silent.
-
-**SciPy would not install.** The only thing needed from it was the Hurwitz zeta for the discrete CDF. At the download speed available, a forty-megabyte wheel was a worse trade than forty lines of Euler–Maclaurin, so `src/hurwitz.py` computes it directly — and is checked against π²/6, π⁴/90, Apéry's constant and its own recurrence rather than against another library, which would not be a check when the library is the thing being removed.
-
-**The scaled zeta exists because the unscaled one silently produced NaN.** The KS search visits fitted exponents in the hundreds on data that is not a power law. There `q ** -s` underflows to zero, the survival ratio becomes 0/0, and the search compares NaNs and picks whatever it happened to start with. `zeta(..., scaled=True)` returns `zeta(s, q) · q^s` so the two underflowing factors cancel analytically.
-
----
 
 ## Limitations
 

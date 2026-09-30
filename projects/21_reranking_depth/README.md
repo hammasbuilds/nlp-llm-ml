@@ -2,7 +2,7 @@
 <p align="center"><i>Project 03's whole finding rests on the number 50. This sweeps it, and the bottleneck moves.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#the-bottleneck-flips">The bottleneck flips</a> &middot;
   <a href="#the-better-the-first-stage-the-shallower-the-window">Optimal depth</a> &middot;
   <a href="#what-survives-of-project-03">What survives of project 03</a> &middot;
@@ -28,7 +28,7 @@ reranker.
 
 ---
 
-## The result
+## Results
 
 HotpotQA · 2,964 documents · 300 queries · `cross-encoder/ms-marco-MiniLM-L-6-v2`.
 

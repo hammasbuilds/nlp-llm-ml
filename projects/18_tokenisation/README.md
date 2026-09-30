@@ -2,7 +2,7 @@
 <p align="center"><i>BPE, WordPiece or Unigram is worth 0.030. The vocabulary size is worth 0.075.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#the-intrinsic-metrics-always-pick-bpe-the-task-does-not">The intrinsic metrics always pick BPE</a> &middot;
   <a href="#unigram-is-the-odd-one-out">Unigram is the odd one out</a> &middot;
   <a href="#method">Method</a> &middot;
@@ -31,7 +31,7 @@ It also keeps the baseline that a subword comparison usually omits: **plain word
 
 ---
 
-## The result
+## Results
 
 HotpotQA · 2,964 documents · 277,259 word tokens · 25,295 word types · 300 queries.
 

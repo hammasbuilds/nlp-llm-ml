@@ -2,7 +2,7 @@
 <p align="center"><i>Authorship attribution on code scores 0.965. Remove the identifiers and 68% of it goes with them — it was topic.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#eighteen-features-with-no-words-in-them">Eighteen features</a> &middot;
   <a href="#burrows-delta-collapses-on-a-full-vocabulary">Delta collapses</a> &middot;
   <a href="#method">Method</a> &middot;
@@ -33,7 +33,7 @@ contribution of what was removed.
 
 ---
 
-## The result
+## Results
 
 | View | what survives | features | Naive Bayes | Burrows' Delta |
 |---|---|---:|---:|---:|

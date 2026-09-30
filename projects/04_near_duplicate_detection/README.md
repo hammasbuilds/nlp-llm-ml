@@ -2,7 +2,7 @@
 <p align="center"><i>Exact hashing found 4 of 30 near-duplicates. It missed 87%.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#what-this-changes-for-devign-leakage">What it changes</a> &middot;
   <a href="#method">Method</a> &middot;
   <a href="#validating-the-estimator">Validating the estimator</a> &middot;
@@ -27,7 +27,7 @@ labelled, how many of them disagree about whether the same code is vulnerable.
 
 ---
 
-## The result
+## Results
 
 Devign test split, 2,732 C functions (1,255 vulnerable / 1,477 not).
 Near-duplicate = Jaccard ≥ 0.8 over 5-token shingles.

@@ -2,7 +2,7 @@
 <p align="center"><i>"TF-IDF" names forty-five different schemes. They span 0.400 of recall — five times the gap between BM25 and a pretrained neural embedding on the same corpus.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#which-decision-carries-the-weight">Which decision</a> &middot;
   <a href="#a-third-of-the-query-code-does-nothing">The inert third</a> &middot;
   <a href="#method">Method</a> &middot;
@@ -42,7 +42,7 @@ Five by three by three is **forty-five schemes per side**. Every one of them is 
 
 ---
 
-## The result
+## Results
 
 HotpotQA, 2,964 paragraphs, 300 questions, two gold paragraphs each — the same corpus
 projects 01, 02 and 03 score on. Query weighting held at the textbook `ltc`.

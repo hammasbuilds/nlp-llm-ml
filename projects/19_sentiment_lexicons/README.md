@@ -2,7 +2,7 @@
 <p align="center"><i>The prediction was that the rules would outweigh the lexicon. In both domains, they do not.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#a-prediction-that-did-not-survive">A prediction that did not survive</a> &middot;
   <a href="#coverage-is-not-the-advantage-it-looks-like">Coverage</a> &middot;
   <a href="#the-best-lexicon-depends-on-the-domain">Domain</a> &middot;
@@ -34,7 +34,7 @@ is wrong**, in both domains, by a margin that survives a bootstrap in 100% of re
 
 ---
 
-## The result
+## Results
 
 Two corpora, both exactly balanced, so the **floor is 0.500** in each.
 

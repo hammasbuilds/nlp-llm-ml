@@ -2,7 +2,7 @@
 <p align="center"><i>Five of five methods beat random. Zero of five beat the most frequent sense.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#the-baseline-you-report-decides-the-story">Which baseline</a> &middot;
   <a href="#the-oracle-that-was-nearly-a-result">The oracle</a> &middot;
   <a href="#how-circular-is-first-sense">How circular is 'first sense'?</a> &middot;
@@ -28,7 +28,7 @@ sense, scored against both baselines.
 
 ---
 
-## The result
+## Results
 
 Polysemous tokens only, 30% of documents held out.
 

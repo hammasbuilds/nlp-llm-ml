@@ -2,7 +2,7 @@
 <p align="center"><i>Compression-based classification, scored as a classifier rather than as a metric that needs the answer.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#why-k--2-and-only-k--2">Why k = 2</a> &middot;
   <a href="#does-the-compressor-matter">The compressor</a> &middot;
   <a href="#method">Method</a> &middot;
@@ -34,7 +34,7 @@ into a prediction**, which is where the published number came from.
 
 ---
 
-## The result
+## Results
 
 1,000 Devign functions as the reference set, 500 as the evaluation set, one gzip distance
 matrix, three ways of reading it:

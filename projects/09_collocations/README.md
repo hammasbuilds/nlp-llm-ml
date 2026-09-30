@@ -2,7 +2,7 @@
 <p align="center"><i>Five association measures over one set of bigram counts. Four of the five top-20 lists share not a single pair.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#the-cutoff-is-the-model">The cutoff is the model</a> &middot;
   <a href="#is-chi-squared-even-admissible">Is chi-squared admissible</a> &middot;
   <a href="#method">Method</a> &middot;
@@ -28,7 +28,7 @@ and the measures disagree most violently about what to do with it.
 
 ---
 
-## The result
+## Results
 
 Top 20 pairs by each measure, from identical counts and no frequency cutoff:
 

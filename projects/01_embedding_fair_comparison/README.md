@@ -2,8 +2,8 @@
 <p align="center"><i>Method, or training data?</i></p>
 
 <p align="center">
-  <a href="#the-result">Results</a> &middot;
-  <a href="#the-same-method-spans-0808">The same method spans 0.808</a> &middot;
+  <a href="#results">Results</a> &middot;
+  <a href="#dense-embedding-retrieval-spans-0808">Dense retrieval spans 0.808</a> &middot;
   <a href="#the-setup">Setup</a> &middot;
   <a href="#what-is-held-constant">What is held constant</a> &middot;
   <a href="#limitations">Limitations</a> &middot;
@@ -36,7 +36,7 @@ that keeps turning out to be hard to beat.
 
 ---
 
-## The result
+## Results
 
 HotpotQA distractor split · 2,964 documents · **277,259 tokens** · 300 queries · exactly 2
 gold documents each · 0 missing gold.

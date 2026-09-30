@@ -2,7 +2,7 @@
 <p align="center"><i>A gazetteer's precision ceiling is set by the ambiguity inside it, not by how many names it holds.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#the-entries-that-are-also-ordinary-english">Ordinary English</a> &middot;
   <a href="#what-a-match-is-worth">What a match is worth</a> &middot;
   <a href="#method">Method</a> &middot;
@@ -28,7 +28,7 @@ does, exactly — but **what a match is worth**.
 
 ---
 
-## The result
+## Results
 
 | | |
 |---|---:|

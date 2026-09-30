@@ -2,7 +2,7 @@
 <p align="center"><i>Project 18 said subwords buy nothing, and said it only for English. On Urdu the algorithm is worth 6× more.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#project-18s-conclusion-does-not-travel">What does not travel</a> &middot;
   <a href="#the-tokenizer-that-quietly-indexes-3-of-the-corpus">A 3% index</a> &middot;
   <a href="#getting-the-corpus-at-20-kbs">Getting the corpus</a> &middot;
@@ -32,7 +32,7 @@ BM25, same measurement.
 
 ---
 
-## The result
+## Results
 
 Title-to-body retrieval: the article title is the query, its body is the one gold document,
 and the title is stripped from the body so nothing wins by matching a copy of itself.

@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="#the-projects">The projects</a> &middot;
-  <a href="#the-through-line">The through-line</a> &middot;
+  <a href="#what-it-does">What it does</a> &middot;
   <a href="#running-a-project">Running a project</a> &middot;
   <a href="#stack">Stack</a>
 </p>
@@ -27,7 +27,7 @@ about the method.**
 
 ---
 
-## The through-line
+## What it does
 
 Most technique comparisons in NLP are not comparisons at all. The usual shape is:
 
@@ -816,7 +816,7 @@ were designed around, which is recorded above rather than quietly rewritten.
 Nothing is outstanding. Project 22's second encoder — the arm that was blocked on a
 throttled download — arrived and is measured; it turned that project's conclusion over.
 
-### What this lab keeps finding
+### What the projects show
 
 Ideas that fit the same shape — a family of techniques where the usual comparison confounds
 something — are what every project here started from. Six of them ended by contradicting an

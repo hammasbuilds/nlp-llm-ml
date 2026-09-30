@@ -2,7 +2,7 @@
 <p align="center"><i>The step that does nothing on its own destroys the gains from the two that work</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#why-the-full-pipeline-loses">Why the full pipeline loses</a> &middot;
   <a href="#method">Method</a> &middot;
   <a href="#limitations">Limitations</a> &middot;
@@ -28,7 +28,7 @@ It is not one step. It is several independent decisions, and **they are not addi
 
 ---
 
-## The result
+## Results
 
 BM25 on HotpotQA. 2,964 documents, 300 queries, exactly 2 gold each. Identical retriever,
 corpus, queries and metric across every row — **only the tokenizer changes**.

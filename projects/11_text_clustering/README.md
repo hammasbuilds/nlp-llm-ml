@@ -2,7 +2,7 @@
 <p align="center"><i>Silhouette picks k = 10 when the truth is 2, and the implementation everyone thinks they are running is the worse of the two.</i></p>
 
 <p align="center">
-  <a href="#the-result">Result</a> &middot;
+  <a href="#results">Results</a> &middot;
   <a href="#cosine-k-means-is-two-algorithms">Two algorithms</a> &middot;
   <a href="#how-much-does-the-seed-decide">The seed</a> &middot;
   <a href="#method">Method</a> &middot;
@@ -27,7 +27,7 @@ one algorithm?
 
 ---
 
-## The result
+## Results
 
 Spherical k-means, mean of three seeds:
 
