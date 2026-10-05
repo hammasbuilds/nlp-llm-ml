@@ -1,4 +1,4 @@
-<h1 align="center">nlp-lab (scikit-learn · sentence-transformers · gensim · NLTK)</h1>
+<h1 align="center">nlp-llm-ml (scikit-learn · sentence-transformers · gensim · NLTK)</h1>
 <p align="center"><i>Classic NLP techniques, measured against each other on the same corpus</i></p>
 
 <p align="center">
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/hammasbuilds/nlp-lab/actions/workflows/ci.yml"><img src="https://github.com/hammasbuilds/nlp-lab/actions/workflows/ci.yml/badge.svg" alt="ci"></a>
+  <a href="https://github.com/hammasbuilds/nlp-llm-ml/actions/workflows/ci.yml"><img src="https://github.com/hammasbuilds/nlp-llm-ml/actions/workflows/ci.yml/badge.svg" alt="ci"></a>
   <img src="https://img.shields.io/badge/python-3.11%2B-blue" alt="python">
   <img src="https://img.shields.io/badge/data-real%20public%20benchmarks-orange" alt="data">
   <img src="https://img.shields.io/badge/downloads%20needed-none-success" alt="no downloads">

@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/badge/data-HotpotQA%20(cached)-orange" alt="data">
   <img src="https://img.shields.io/badge/downloads%20needed-none-success" alt="no downloads">
   <img src="https://img.shields.io/badge/status-7%20of%207%20methods-brightgreen" alt="status">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="license"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="license"></a>
 </p>
 
 ---
@@ -231,4 +231,4 @@ ablation · training data vs method · reproducible evaluation
 
 ## Licence
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](../../LICENSE).
